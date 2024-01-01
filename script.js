@@ -1730,7 +1730,6 @@
     };
   }
   pageLoad();
-  window.onload = function () {
     setTimeout(function () {
     document.getElementById("tile-text-7Qfg6X").insertAdjacentHTML('beforeend',
       '<div id="loaderAlign">' +
@@ -1741,4 +1740,4 @@
       '</div>'
     );
   }, 2000);
-  };
+  
