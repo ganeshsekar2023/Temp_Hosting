@@ -865,12 +865,3 @@
   pageLoad();
  {
      
-    setIframeSrc();
-    window.onscroll = function () {
-      if (isScrolledIntoView()) {
-        sendDataToChild();
-      }
-    };
-  }
-  pageLoad();
-
