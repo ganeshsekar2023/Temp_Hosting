@@ -1722,7 +1722,16 @@
 
   /* -------------------------------------------- page Load function -----------------*/
   function pageLoad() {
-      setTimeout(function () {
+     
+    setIframeSrc();
+    window.onscroll = function () {
+      if (isScrolledIntoView()) {
+        sendDataToChild();
+      }
+    };
+  }
+  pageLoad();
+   setTimeout(function () {
     document.getElementById("tile-text-7Qfg6X").insertAdjacentHTML('beforeend',
       '<div id="loaderAlign">' +
         '<div class="loader"></div>' +
@@ -1732,13 +1741,4 @@
       '</div>'
     );
   }, 2000);
-    setIframeSrc();
-    window.onscroll = function () {
-      if (isScrolledIntoView()) {
-        sendDataToChild();
-      }
-    };
-  }
-  pageLoad();
-  
   
